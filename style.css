@@ -1,0 +1,84 @@
+html {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'aglet-mono', sans-serif;
+    color: #202020;
+    background-color: whitesmoke;
+}
+
+header {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+
+h1, h2 {
+    display: inline;
+    font-family: 'dunkel-sans-medium', sans-serif;
+    text-transform: uppercase;
+}
+
+nav {
+    text-align: right;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+img {
+    border: 0.5rem solid #202020;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: lightgray;
+    justify-content: center;
+}
+
+figure.covers {
+    background: white;
+    border: solid 1rem white;
+    text-align: center;
+}
+
+figure.header_img {
+    text-align: center;
+    grid-template-areas: 
+}
+
+figcaption.release {
+    font-style: italic;
+}
+
+img.header_img {
+    max-width: 80%;
+}
+
+img.covers {
+    box-sizing: border-box;
+    max-width: 300px;
+    border: 0.5rem solid #202020;
+}
+
+a, abbr {
+    text-decoration: none;
+    color: #202020;
+}
+
+footer a {
+    position: absolute;
+    right: 5%;
+    padding-top: 1rem;
+}
+
