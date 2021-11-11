@@ -2,34 +2,71 @@
     box-sizing: border-box;
 }
 
-.hmf {
-    background: ghostwhite;
-    border: solid 3px #3d3d3d;
-    margin: 0.5em;
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    background: #d3d3d3ee;
+    box-shadow: #3d3d3d 0.15em 0.15em 0.5em;
     padding: 0.5em;
 }
 
+.header-box {
+    display: flex;
+    flex-direction: column;
+    width: 30em;
+    justify-content: center;
+    align-items: center;
+    background: whitesmoke;
+    border: solid 1px #3d3d3d;
+    box-shadow: 0.25em 0.25em 0.5em #3d3d3d, 
+                -0.25em -0.25em 0.5em #d3d3d3;
+    margin: 0.5em;
+}
+
+body {
+    font-family: 'aglet-mono', sans-serif;
+    color: #202020;
+    background: ghostwhite;
+}
+
+main {
+    padding: 2em;
+}
+
+section.discography {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
 figure {
+    display: flex;
+    flex-direction: column;
     width: 350px;
     text-align: center;
     background: whitesmoke;
     border: solid 1px #3d3d3d;
     box-shadow: 0.25em 0.25em 0.5em #3d3d3d, 
                 -0.25em -0.25em 0.5em #d3d3d3;
+    padding: 0 0 0.75em 0; 
 }
 
-section#discography {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-body {
-    font-family: 'aglet-mono', sans-serif;
-    color: #202020;
-}
-
-h1, h2 {
+h1 {
+    display: inline-block;
+    margin: 0;
     font-family: 'dunkel-sans-medium', sans-serif;
+    font-size: 2.5em;
     text-transform: uppercase;
 }
 
@@ -37,11 +74,23 @@ ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    text-align: center;
 }
 
+ul li ul {
+    visibility: hidden;
+    display: none; 
+}
+
+ul li:hover > ul,
+ul li ul:hover {
+    visibility: visible;
+    display: block;
+}
+
+
 ul li:hover, a:hover {
-    text-shadow: 0.1em 0.1em 0.25em white;
-    font-size: 1.25em;
+    font-size: 1.05em;
     padding-left: 0.25em;
 }
 
@@ -58,7 +107,7 @@ img.covers {
     display: none;
 } 
 
-.covers:hover .tracklist {
+figure:hover .tracklist {
     display: block;
 }
 
@@ -68,5 +117,20 @@ a, abbr {
 }
 
 footer {
-    text-align: end;
+    display: flex;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    height: 5%;
+    background-color: #d3d3d3ee;
+    box-shadow: #3d3d3d -0.1em -0.1em 0.25em;
+    justify-content: center;
+    align-items: center;
+    padding: 0.25em;
+}
+
+@media only screen and (min-width: 400px) {
+    figure {
+        width: 60%;
+    }
 }
